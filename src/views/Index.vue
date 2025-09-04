@@ -3,7 +3,7 @@
     <div style="height: 100%">
       <n-layout position="absolute">
         <n-layout-header style="height: 64px; padding: 24px" bordered>
-          <n-flex justify="space-between" wrap="false">
+          <n-flex justify="space-between">
             <n-flex justify="start">Header</n-flex>
             <n-flex justify="end">
               暗色主题
@@ -34,9 +34,8 @@ import SideMenu from '@/components/menu/SideMenu'
 const props = defineProps()
 const activeDarkTheme = ref(true)
 const menuOptions = [
-  { id: 1, name: 'Home' },
-  { id: 2, name: 'About' },
-  { id: 3, name: 'Contact' },
+  { id: 1, name: 'SVE', path: '/sve' },
+  { id: 2, name: 'MBTI', path: '/mbti' },
 ]
 function activeThemeChange(value: boolean) {
   activeDarkTheme.value = value

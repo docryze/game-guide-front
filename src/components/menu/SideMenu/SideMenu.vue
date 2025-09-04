@@ -6,12 +6,12 @@
 import { h } from 'vue'
 import { RouterLink } from 'vue-router'
 import type { MenuOption } from 'naive-ui'
-import type { SideMenuProps } from './types';
+import type { SideMenuProps } from './types'
 defineOptions({
-  name : "SideMenu",
-});
-const props = defineProps<SideMenuProps>();
-const menuOptions: MenuOption[] = props.menuOptions.map(p => {
+  name: 'SideMenu',
+})
+const props = defineProps<SideMenuProps>()
+const menuOptions: MenuOption[] = props.menuOptions.map((p) => {
   return {
     key: p.id,
     label: () =>
@@ -19,14 +19,14 @@ const menuOptions: MenuOption[] = props.menuOptions.map(p => {
         RouterLink,
         {
           to: {
-            path: '/game',
+            path: p.path,
             // query: {
             //   id: '1',
             // },
           },
         },
         { default: () => p.name },
-      )
+      ),
   }
 })
 </script>
